@@ -44,42 +44,119 @@ This process relies only on commutativity and associativity, ensuring that the r
 ## 3. Proofs and Examples
 
 ### 3.1 Derivation of $\int \frac{1}{x} dx = \ln|x|$
-Starting with the exponential relationship:
 
+To derive the integral $\int \frac{1}{x} dx = \ln|x|$, we use the principle of inverted duals. 
 
-1.  $x = e^y$, 
-2. $\frac{dx}{dy} = e^y, \text{(differentiation)}$
-3. $\frac{dy}{dx} = \frac{1}{e^y}, \text{(reciprocal relationship)}$
-4. $\text{Substitute } e^y = x \text{ into } \frac{dy}{dx} = \frac{1}{x}$.
+#### Step 1: Begin with the logarithmic relationship
+We start with the function:
 
-Integrating $\frac{dy}{dx} = \frac{1}{x}$ with respect to $x$ gives:
+$$
+y = \ln|x|.
+$$
+
+#### Step 2: Invert the relationship
+Inverting the equation, we express $x$ in terms of $y$:
+
+$$
+x = e^y.
+$$
+
+#### Step 3: Differentiate the inverse
+1. Compute $\frac{dx}{dy}$:
+
+$$
+\frac{dx}{dy} = e^y.
+$$
+
+2. Compute $\frac{dy}{dx}$ using the reciprocal relationship:
+
+$$
+\frac{dy}{dx} = \frac{1}{e^y}.
+$$
+
+#### Step 4: Express $\frac{dy}{dx}$ in terms of $x$
+Substitute $x = e^y$ into $\frac{dy}{dx} = \frac{1}{e^y}$:
+
+$$
+\frac{dy}{dx} = \frac{1}{x}.
+$$
+
+#### Step 5: Integrate to find the original function
+The relationship $\frac{dy}{dx} = \frac{1}{x}$ implies:
+
+$$
+\int \frac{1}{x} dx = y.
+$$
+
+Since $y = \ln|x|$, we conclude:
 
 $$
 \int \frac{1}{x} dx = \ln|x|.
 $$
 
-This demonstrates the reciprocal relationship and the geometric link between the function and its inverse.
+---
 
-### 3.2 Fundamental Role of Algebra in Inversions and Reciprocals
-Inversions and reciprocals are not special operations; they are direct consequences of:
-- **Commutativity:** $a \cdot b = b \cdot a$,
-- **Associativity:** $(a \cdot b) \cdot c = a \cdot (b \cdot c)$,
-- **Distributivity:** $a \cdot (b + c) = a \cdot b + a \cdot c$.
+### 3.2 Dual Representation of $x = 3y^3$
 
-For example, solving $y = f(x)$ for $x$ involves rearranging terms using these properties.
+To further illustrate the principle of inverted duals, consider the equation:
+
+$$
+x = 3y^3.
+$$
+
+#### Step 1: Work in the $y$-domain
+1. Compute $\frac{dx}{dy}$:
+
+$$
+\frac{dx}{dy} = 9y^2.
+$$
+
+2. Compute $\frac{dy}{dx}$ (reciprocal relationship):
+
+$$
+\frac{dy}{dx} = \frac{1}{9y^2}.
+$$
+
+#### Step 2: Invert to express $y$ in terms of $x$
+1. Solve for $y$:
+
+$$
+y = \sqrt[3]{\frac{x}{3}}.
+$$
+
+2. Substitute $y = \sqrt[3]{\frac{x}{3}}$ into the derivatives:
+   - For $\frac{dx}{dy}$:
+
+$$
+\frac{dx}{dy} = 9 \left(\sqrt[3]{\frac{x}{3}}\right)^2.
+$$
+
+   - For $\frac{dy}{dx}$:
+
+$$
+\frac{dy}{dx} = \frac{1}{9 \left(\sqrt[3]{\frac{x}{3}}\right)^2}.
+$$
+
+#### Step 3: Observe the six dual relationships
+From the single equation $x = 3y^3$, we derive:
+1. The original equation: $x = 3y^3$.
+2. Its inverse: $y = \sqrt[3]{\frac{x}{3}}$.
+3. The derivative $\frac{dx}{dy} = 9y^2$.
+4. The derivative $\frac{dy}{dx} = \frac{1}{9y^2}$.
+5. The derivative $\frac{dx}{dy}$ expressed in terms of $x$: $9 \left(\sqrt[3]{\frac{x}{3}}\right)^2$.
+6. The derivative $\frac{dy}{dx}$ expressed in terms of $x$: $\frac{1}{9 \left(\sqrt[3]{\frac{x}{3}}\right)^2}$.
 
 ---
 
 ## 4. Implications for Calculus
+
 ### 4.1 Enhanced Understanding
-Viewing equations in terms of their inverted duals highlights the symmetry between functions and their inverses, fostering a deeper understanding of calculus concepts such as derivatives, integrals, and implicit relationships.
+The derivation of $\int \frac{1}{x} dx = \ln|x|$ and the representation of $x = 3y^3$ demonstrate how inverted duals streamline the process of understanding relationships between variables and their derivatives. These duals provide a framework for both integration and differentiation in simpler domains.
 
 ### 4.2 Simplified Problem Solving
-The inverted dual perspective often reveals simpler pathways to solutions. For instance:
-- If $\frac{dy}{dx}$ is difficult to compute, $\frac{dx}{dy}$ can be used instead, leveraging their reciprocal relationship.
+Inverted duals allow for systematic derivations by focusing on the simpler $y$-domain first, leveraging inversions to express all relationships in terms of $x$ through substitution.
 
 ---
 
 ## 5. Conclusion
-The importance of inverted duals in calculus lies in their ability to unify algebraic, geometric, and analytical perspectives. By recognizing functions as inherently invertible and variables as interchangeable, we uncover a deeper, more intuitive understanding of mathematical relationships. Inversions and reciprocals are not special operations but fundamental principles guaranteed by algebra, essential for unlocking the full potential of calculus.
-
+The importance of inverted duals in calculus lies in their ability to unify algebraic, geometric, and analytical perspectives. By recognizing functions as inherently invertible and variables as interchangeable, we uncover a deeper, more intuitive understanding of mathematical relationships. Inversions and reciprocals are not special operations but fundamental principles essential for unlocking the full potential of calculus.
